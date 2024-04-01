@@ -1,0 +1,31 @@
+<template>
+    <ul>
+        <li v-bind="storedResources" v-for="resource in storedResources">
+            {{ resource.title }}
+        </li>
+    </ul>
+</template>
+
+<script>
+
+export default {
+    data() {
+        return {
+            storedResources: [
+                {
+                    id: 'official-guide',
+                    title: 'Official guide',
+                    description: 'The official vue.js documentation',
+                    link: 'https://vuejs.org'
+                },
+                                {
+                    id: 'google',
+                    title: 'Google',
+                    description: 'Learn to google',
+                    link: 'https://google.com'
+                }
+            ]
+        };
+    }
+}
+</script>
